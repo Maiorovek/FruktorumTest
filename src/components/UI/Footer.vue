@@ -1,33 +1,33 @@
 <template>
     <div class="footer">
-        <div class="footer__Content">
-            <div class="footer__Content__Info">
-                <MyLogo> </MyLogo>
-                <div class="footer__Content__Info__Text">
+        <div class="footer__content">
+            <div class="content__info">
+                <MainLogo> </MainLogo>
+                <div class="content__text">
                     Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая
                     мир эстетики и креативности
                 </div>
             </div>
-            <div class="footer__Content__Links">
-                <div class="footer__Content__Links__Mail">
-                    <div class="footer__Content__Links__Mail__Name"> email </div>
-                    <div class="footer__Content__Links__Mail__Description"> testblogsupport@gmail.com </div>
+            <div class="footer__content__links">
+                <div class="links__mail">
+                    <div class="mail__name"> email </div>
+                    <div class="mail__description"> testblogsupport@gmail.com </div>
                 </div>
-                <div class="footer__Content__Links__Icons">
-                    <div class="footer__Content__Links__Icons__Icon"> </div>
-                    <div class="footer__Content__Links__Icons__Icon"> </div>
-                    <div class="footer__Content__Links__Icons__Icon"> </div>
-                    <div class="footer__Content__Links__Icons__Icon"> </div>
+                <div class="links__icons">
+                    <div class="icon"> </div>
+                    <div class="icon"> </div>
+                    <div class="icon"> </div>
+                    <div class="icon"> </div>
                 </div>
             </div>
         </div>
-        <MySubscribeBar> </MySubscribeBar>
+        <SubscribeBar> </SubscribeBar>
     </div>
 </template>
 
 <script setup>
-import MySubscribeBar from '../sections/MySubscribeBar.vue';
-import MyLogo from './Kit/MyLogo.vue';
+import SubscribeBar from '../sections/SubscribeBar.vue';
+import MainLogo from './Kit/MainLogo.vue';
 
 
 </script>
@@ -36,16 +36,16 @@ import MyLogo from './Kit/MyLogo.vue';
 .footer {
     border-top: 1px solid #8D959C;
 
-    &__Content {
+    &__content {
         margin-top: 50px;
         margin-bottom: 70px;
         display: flex;
         justify-content: space-between;
         font-weight: 400;
 
-        &__Info {
+        .content__info {
 
-            &__Text {
+            .content__text {
                 margin-top: 20px;
                 max-width: 400px;
                 font-size: 14px;
@@ -55,29 +55,29 @@ import MyLogo from './Kit/MyLogo.vue';
             }
         }
 
-        &__Links {
+        &__links {
             margin-right: 78px;
 
-            &__Mail {
+            .links__mail {
 
-                &__Name {
+                .mail__name{
                     font-size: 14px;
                     line-height: 20px;
                     color: #8D959C;
 
                 }
 
-                &__Description {
+                .mail__description {
                     font-size: 18px;
                     line-height: 22px;
                     color: #1B1B1B;
                 }
             }
 
-            &__Icons {
+            .links__icons {
                 display: flex;
 
-                &__Icon {
+                .icon {
                     margin-top: 24px;
                     margin-right: 20px;
                     width: 30px;

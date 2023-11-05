@@ -1,15 +1,19 @@
 import { defineStore } from 'pinia';
-export const useStore = defineStore('posts', () => {
-    const posts = ref([]);
+import axios from 'axios';
 
-    const fetchPosts = async () => {
-        const { data } = await useFetch('https://devtwit8.ru/api/v1/page/?path=/', () => store.posts());
-        if (data.value) {
-            posts.value = data.value;
-        }
-    };
-    return {
-        posts,
-        fetchPosts,
-    };
+export const useStore = defineStore('posts', {
+  state: () => ({
+    posts: [],
+  }),
+  getters: {},
+  actions: {
+    async fetchPosts(path = "") {
+      try {
+        const response = await axios.get(`https://devtwit8.ru/api/v1/page/?path=/${path}`);
+        this.posts = response.data;
+      } catch (error) {
+        console.error(error);
+      }
+    },
+  },
 });

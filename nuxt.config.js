@@ -13,14 +13,13 @@ export default defineNuxtConfig({
       },
     ],
   },
-  dir: {
-    pages: './src/pages',
-  },
+  css: [
+    '@/src/assets/index.scss',
+  ],
   modules: [
     '@pinia/nuxt',
   ],
   pinia: {
     storesDirs: ['./store/**']
-  }
-
+  },
 })

@@ -1,51 +1,50 @@
 <template>
-    <div class="postBlock">
-        <div class="postBlock__Image">
-            <img class="postBlock__Image__Img" :src="body.image">
+    <div class="post-block">
+        <div class="post-block__image__box">
+            <img class="post__image" :src="body.image">
         </div>
-        <div class="postBlock__Text">
+        <div class="post-block__text">
             {{ body.title }}
         </div>
-        <MyButton v-bind:link="body.link"> Читать </MyButton>
+        <CustomRouteButton :link="body.link" label="Читать"/> 
 
     </div>
 </template>
 
 <script setup>
-import MyButton from "../UI/Kit/MyButton.vue"
 import { useStore } from '@/store/index'
+import CustomRouteButton from "./Kit/CustomRouteButton.vue";
 const store = useStore();
 
-
-
-const props = defineProps(['body'])
-
-// console.log(props.body);
-
+const props = defineProps({
+    body: {
+        type: Object,
+        required: true,
+    },
+})
 
 </script>
 
 <style lang="scss" scoped>
-.postBlock {
-    
+.post-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    &__Image {
+    &__image__box {
         max-height: 320px;
         max-width: 100%;
         border-radius: 2px;
         overflow: hidden;
 
-        &__Img {
+        .post__image {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
 
-    &__Text {
+    &__text {
         margin-top: 20px;
         margin-bottom: 30px;
         max-width: 100%;

@@ -1,11 +1,11 @@
 <template>
     <div class="header">
-        <MyLogo></MyLogo>
+        <MainLogo></MainLogo>
     </div>
 </template>
 
 <script setup>
-import MyLogo from './Kit/MyLogo.vue';
+import MyLogo from './Kit/MainLogo.vue';
 
 
 </script>

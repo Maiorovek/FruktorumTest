@@ -1,20 +1,21 @@
 <template>
     <div class="subscribe__Bar">
         <div class="subscribe__Bar__Title"> Подпишись на рассылку </div>
-        <MyInput class="subscribe__Bar__Input"> </MyInput>
-        <MyButton class="subscribe__Bar__Btn"> Подписаться </MyButton>
+        <CustomInput class="subscribe__Bar__Input"> </CustomInput>
+        <CustomButton class="subscribe__Bar__Btn" label="Подписаться"/>
     </div>
 </template>
 
 <script setup>
-import MyButton from '../UI/Kit/MyButton.vue';
-import MyInput from '../UI/Kit/MyInput.vue';
+import CustomButton from '@/src/components/UI/Kit/CustomButton.vue';
+import CustomInput from '@/src/components/UI/Kit/CustomInput.vue';
 
 
 </script>
 
 <style lang="scss" scoped>
 .subscribe__Bar {
+    margin-top: 100px;
     height: 100px;
     display: flex;
     justify-content: flex-end;
