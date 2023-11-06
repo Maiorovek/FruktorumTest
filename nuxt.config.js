@@ -18,8 +18,12 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@pinia/nuxt',
+    'nuxt-swiper',
   ],
   pinia: {
     storesDirs: ['./store/**']
+  },
+  swiper: {
+    styleLang: 'scss',
   },
 })

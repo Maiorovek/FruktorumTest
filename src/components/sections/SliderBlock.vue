@@ -1,103 +1,54 @@
 <template>
     <div class="slider-block">
-        <div class="sider-content">
-            <CustomButton class="custom-button" @click="prevSlide" label="&lt;" />
-            <div class="slider-wrapper">
-                <div class="slider-slide" v-for="(image, index) in sectionData.data" :key="`${image.id}`">
-                    <transition name="slide-in">
-                        <div class="slide" v-show="currentIndex === index">
-                            <img class="image" :src="image" />
-                        </div>
-                    </transition>
-                </div>
-            </div>
-            <CustomButton class="custom-button" @click="nextSlide" label="&gt;" />
-        </div>
-        <div class="slider-counter"> {{ currentIndex + '/' + props.sectionData.data.length }} </div>
+        <Swiper
+        class="swiper" 
+        :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]" 
+        :slides-per-view="1" 
+        :loop="true" 
+        :effect="'creative'"
+        :autoplay="{
+            delay: 8000,
+            disableOnInteraction: true,
+        }" 
+            :creative-effect="{
+                prev: {
+                    shadow: false,
+                    translate: ['-20%', 0, -1],
+                },
+                next: {
+                    translate: ['100%', 0, 0],
+                },
+            }"
+        >
+            <SwiperSlide v-for="slide in sectionData" :key="slide">
+                <img class="image" :src="slide" alt="">
+            </SwiperSlide>
+            <SwiperNav/>
+        </Swiper>
     </div>
 </template>
-  
+
 <script setup>
-import CustomButton from '../UI/Kit/CustomButton.vue';
-import { defineProps, ref } from 'vue';
+import SwiperNav from '../UI/SwiperNav.vue';
 
 const props = defineProps({
     sectionData: {
         type: Object,
         required: true,
-    },
-});
-
-let currentIndex = ref(0);
-
-const nextSlide = () => {
-    currentIndex.value = (currentIndex.value + 1) % props.sectionData.data.length;
-};
-
-const prevSlide = () => {
-    currentIndex.value = (currentIndex.value - 1 + props.sectionData.data.length) % props.sectionData.data.length;
-};
+    }
+})
 </script>
-  
+
+
 <style lang="scss" scoped>
 .slider-block {
     margin-top: 100px;
-    .sider-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .custom-button {
-            width: 60px;
-            height: 60px;
-            background-color: #1B1B1B;
-
-            &:hover {
-                background-color: #3657D3;
-                transition: background-color .2s linear;
-            }
-        }
-
-        .slider-wrapper {
-            max-width: 1112px;
-            max-height: 550px;
-            position: relative;
-            overflow: hidden;
-
-            .slider-slide {
-                max-width: 1100px;
-                max-height: 550px;
-
-
-                .slide-in-enter-active,
-                .slide-in-leave-active {
-                    transition: all .6s ease;
-                }
-
-                .slide-in-enter-from {
-                    transform: translateX(-100%);
-                }
-
-                .slide-in-leave-to {
-                    transform: translateX(-100%);
-                }
-
-                .image {
-                    border-radius: 2px;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-
+    .swiper {
+        .image {
+            width: 100%;
         }
     }
-    .slider-counter {
-        margin-top: 25px;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 26px;
-        text-align: center;
-    }
+    
 }
+
 </style>
