@@ -34,7 +34,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .slider__block {
-    margin-top: 100px;
+    margin-bottom: 100px;
 
     .swiper {
         .image {

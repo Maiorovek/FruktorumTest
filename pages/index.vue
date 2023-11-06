@@ -1,7 +1,5 @@
 <template>
-    <div class="wrapper">
         <ArticleList :sectionData="store.posts.body[0].data"></ArticleList>
-    </div>
 </template>
 
 <script setup>

@@ -26,6 +26,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 100px;
 
         .image__box {
             margin-right: 30px;

@@ -15,9 +15,9 @@ const props = defineProps({
 
 <style lang="scss">
 .text_block {
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     max-width: 50%;

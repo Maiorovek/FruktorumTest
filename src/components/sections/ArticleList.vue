@@ -27,7 +27,6 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .articles {
-    margin-top: 100px;
     margin-bottom: 100px;
 
     &__title {

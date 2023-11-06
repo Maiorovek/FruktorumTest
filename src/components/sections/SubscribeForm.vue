@@ -13,7 +13,7 @@ import CustomInput from '@/src/components/UI/Kit/CustomInput.vue';
 
 <style lang="scss" scoped>
 .subscribe__bar {
-    margin-top: 100px;
+    margin-bottom: 100px;
     height: 100px;
     display: flex;
     justify-content: flex-end;

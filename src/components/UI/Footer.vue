@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <SubscribeForm/>
+        <SubscribeForm style="margin-bottom: 0;"/>
     </div>
 </template>
 
@@ -62,7 +62,6 @@ import MainLogo from './Kit/MainLogo.vue';
                     font-size: 14px;
                     line-height: 20px;
                     color: #8D959C;
-
                 }
 
                 .mail__description {
@@ -83,7 +82,6 @@ import MainLogo from './Kit/MainLogo.vue';
                     background-color: #1B1B1B;
                     border-radius: 15px;
                 }
-
             }
         }
     }

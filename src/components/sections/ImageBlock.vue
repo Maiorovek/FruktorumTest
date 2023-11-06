@@ -20,7 +20,7 @@ const props = defineProps({
 .image__block {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-bottom: 100px;
     width: 100%;
 
     .image__box {
