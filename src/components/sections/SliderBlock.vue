@@ -1,16 +1,19 @@
 <template>
     <div class="slider-block">
-        <CustomButton class="custom-button" @click="prevSlide" label="&lt;" />
-        <div class="slider-wrapper">
-            <div class="slider-slide" v-for="(image, index) in images.data" :key="`${image.id}`">
-                <transition name="slide-in">
-                    <div class="slide" v-show="currentIndex === index">
-                        <img class="image" :src="image" />
-                    </div>
-                </transition>
+        <div class="sider-content">
+            <CustomButton class="custom-button" @click="prevSlide" label="&lt;" />
+            <div class="slider-wrapper">
+                <div class="slider-slide" v-for="(image, index) in images.data" :key="`${image.id}`">
+                    <transition name="slide-in">
+                        <div class="slide" v-show="currentIndex === index">
+                            <img class="image" :src="image" />
+                        </div>
+                    </transition>
+                </div>
             </div>
+            <CustomButton class="custom-button" @click="nextSlide" label="&gt;" />
         </div>
-        <CustomButton class="custom-button" @click="nextSlide" label="&gt;" />
+        <div class="slider-counter"> {{ currentIndex + '/' + props.images.data.length }} </div>
     </div>
 </template>
   
@@ -39,48 +42,62 @@ const prevSlide = () => {
 <style lang="scss" scoped>
 .slider-block {
     margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .sider-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    .custom-button {
-        width: 60px;
-        height: 60px;
-    }
+        .custom-button {
+            width: 60px;
+            height: 60px;
+            background-color: #1B1B1B;
 
-    .slider-wrapper {
-        max-width: 1112px;
-        max-height: 550px;
-        position: relative;
-        overflow: hidden;
-
-        .slider-slide {
-            max-width: 1100px;
-            max-height: 550px;
-
-
-            .slide-in-enter-active,
-            .slide-in-leave-active {
-                transition: all .6s ease;
-            }
-
-            .slide-in-enter-from {
-                transform: translateX(-100%);
-            }
-
-            .slide-in-leave-to {
-                transform: translateX(-100%);
-            }
-
-            .image {
-                border-radius: 2px;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+            &:hover {
+                background-color: #3657D3;
+                transition: background-color .2s linear;
             }
         }
 
+        .slider-wrapper {
+            max-width: 1112px;
+            max-height: 550px;
+            position: relative;
+            overflow: hidden;
 
+            .slider-slide {
+                max-width: 1100px;
+                max-height: 550px;
+
+
+                .slide-in-enter-active,
+                .slide-in-leave-active {
+                    transition: all .6s ease;
+                }
+
+                .slide-in-enter-from {
+                    transform: translateX(-100%);
+                }
+
+                .slide-in-leave-to {
+                    transform: translateX(-100%);
+                }
+
+                .image {
+                    border-radius: 2px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+        }
+    }
+    .slider-counter {
+        margin-top: 25px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: center;
     }
 }
 </style>

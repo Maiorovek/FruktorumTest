@@ -1,7 +1,7 @@
 <template>
     <div class="articles">
         <div class="articles__title"> {{ articles.title }} </div>
-        <div class="articles__Content">
+        <div class="articles__content">
             <div 
                 class="articles__content__post" 
                 v-for="post in articles.articles" 

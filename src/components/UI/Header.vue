@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import MyLogo from './Kit/MainLogo.vue';
+import MainLogo from './Kit/MainLogo.vue';
 
 
 </script>

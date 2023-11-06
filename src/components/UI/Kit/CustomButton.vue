@@ -17,22 +17,18 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .custom-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 164px;
     max-height: 46px;
     padding: 10px;
-    border: 1px;
+    background-color: #3657D3;
+    border: 1px solid #3657D3;
     border-radius: 2px;
-    background-color: #1B1B1B;
     color: white;
     font-size: 18px;
-    text-decoration: none;
 
     &:hover {
-        background-color: #3657D3;
-        transition: background-color .2s linear;
+        background-color: transparent;
+        transition: background-color .4s ease;
     }
 }
 </style>
