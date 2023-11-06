@@ -10,7 +10,7 @@
 <script setup>
 import article_intro_block from '~/src/components/sections/ArticleIntro.vue';
 import image_block from '~/src/components/sections/ImageBlock.vue';
-import subscribe_form_block from '~/src/components/sections/SubscribeBar.vue';
+import subscribe_form_block from '~/src/components/sections/SubscribeForm.vue';
 import slider_block from '~/src/components/sections/SliderBlock.vue';
 import text_block from '~/src/components/sections/TextBlock.vue';
 import article_list_block from '~/src/components/sections/ArticleList.vue';

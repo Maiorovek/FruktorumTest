@@ -16,13 +16,9 @@
 <script setup>
 import CustomButton from './Kit/CustomButton.vue';
 const swiper = useSwiper()
-
-
-
 </script>
 
 <style lang="scss" scoped>
-
 .swiper-nav {
     display: flex;
     justify-content: space-between;

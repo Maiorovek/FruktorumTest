@@ -1,13 +1,11 @@
 <template>
     <div class="header">
-        <MainLogo></MainLogo>
+        <MainLogo/>
     </div>
 </template>
 
 <script setup>
 import MainLogo from './Kit/MainLogo.vue';
-
-
 </script>
 
 <style lang="scss" scoped>

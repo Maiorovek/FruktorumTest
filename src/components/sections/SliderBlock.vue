@@ -1,29 +1,22 @@
 <template>
-    <div class="slider-block">
-        <Swiper
-        class="swiper" 
-        :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]" 
-        :slides-per-view="1" 
-        :loop="true" 
-        :effect="'creative'"
-        :autoplay="{
-            delay: 8000,
-            disableOnInteraction: true,
-        }" 
-            :creative-effect="{
-                prev: {
-                    shadow: false,
-                    translate: ['-20%', 0, -1],
-                },
-                next: {
-                    translate: ['100%', 0, 0],
-                },
-            }"
-        >
+    <div class="slider__block">
+        <Swiper class="swiper" :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]" :slides-per-view="1"
+            :loop="true" :effect="'creative'" :autoplay="{
+                delay: 8000,
+                disableOnInteraction: true,
+            }" :creative-effect="{
+    prev: {
+        shadow: false,
+        translate: ['-20%', 0, -1],
+    },
+    next: {
+        translate: ['100%', 0, 0],
+    },
+}">
             <SwiperSlide v-for="slide in sectionData" :key="slide">
                 <img class="image" :src="slide" alt="">
             </SwiperSlide>
-            <SwiperNav/>
+            <SwiperNav />
         </Swiper>
     </div>
 </template>
@@ -39,16 +32,14 @@ const props = defineProps({
 })
 </script>
 
-
 <style lang="scss" scoped>
-.slider-block {
+.slider__block {
     margin-top: 100px;
+
     .swiper {
         .image {
             width: 100%;
         }
     }
-    
 }
-
 </style>

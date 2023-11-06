@@ -2,7 +2,7 @@
     <div class="footer">
         <div class="footer__content">
             <div class="content__info">
-                <MainLogo> </MainLogo>
+                <MainLogo/>
                 <div class="content__text">
                     Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая
                     мир эстетики и креативности
@@ -21,15 +21,13 @@
                 </div>
             </div>
         </div>
-        <SubscribeBar> </SubscribeBar>
+        <SubscribeForm/>
     </div>
 </template>
 
 <script setup>
-import SubscribeBar from '../sections/SubscribeBar.vue';
+import SubscribeForm from '../sections/SubscribeForm.vue';
 import MainLogo from './Kit/MainLogo.vue';
-
-
 </script>
 
 <style lang="scss" scoped>
@@ -60,7 +58,7 @@ import MainLogo from './Kit/MainLogo.vue';
 
             .links__mail {
 
-                .mail__name{
+                .mail__name {
                     font-size: 14px;
                     line-height: 20px;
                     color: #8D959C;

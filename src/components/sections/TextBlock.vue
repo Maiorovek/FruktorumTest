@@ -1,5 +1,5 @@
 <template>
-    <div class="text-block" v-html="sectionData">
+    <div class="text_block" v-html="sectionData">
     </div>
 </template>
 
@@ -14,7 +14,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
-.text-block {
+.text_block {
     display: flex;
     flex-direction: column;
     margin-top: 100px;

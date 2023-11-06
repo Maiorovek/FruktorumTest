@@ -1,22 +1,20 @@
 <template>
-    <button class="custom-button">
+    <button class="custom__button">
         {{ props.label }}
     </button>
 </template>
 
 <script setup>
-
 const props = defineProps({
     label: {
         type: String,
         required: true,
     },
 })
-
 </script>
 
 <style lang="scss" scoped>
-.custom-button {
+.custom__button {
     max-width: 164px;
     max-height: 46px;
     padding: 10px;

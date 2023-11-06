@@ -1,13 +1,13 @@
 <template>
     <div class="post">
-        <div class="post__image__box" >
-            <img class="post__image" :src="props.sectionData.image">
+        <div class="image__box" >
+            <img class="post__image" :src="sectionData.image">
         </div>
         <div class="post__info">
-            <div class="info__title"> {{ props.sectionData.title  }}</div>
-            <div class="info__time"> {{ props.sectionData.reading_time + ' мин время чтения'}} </div>
-            <div class="info__views"> {{ props.sectionData.views_count + ' прочитали статью'}} </div>
-            <div class="info__text"> {{ props.sectionData.short_description }} </div>
+            <div class="info__title"> {{ sectionData.title  }}</div>
+            <div class="info__time"> {{ sectionData.reading_time + ' мин время чтения'}} </div>
+            <div class="info__views"> {{ sectionData.views_count + ' прочитали статью'}} </div>
+            <div class="info__text"> {{ sectionData.short_description }} </div>
         </div>
     </div>
 </template>
@@ -27,7 +27,7 @@
         justify-content: space-between;
         align-items: center;
 
-        &__image__box {
+        .image__box {
             margin-right: 30px;
             max-width: 541px;
             max-height: 580px;

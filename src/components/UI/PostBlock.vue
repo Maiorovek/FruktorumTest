@@ -6,7 +6,7 @@
         <div class="post-block__text">
             {{ body.title }}
         </div>
-        <CustomRouteButton :link="body.link" label="Читать"/> 
+        <CustomRouteButton :link="body.link" label="Читать" />
 
     </div>
 </template>

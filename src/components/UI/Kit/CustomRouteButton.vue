@@ -1,12 +1,10 @@
-<template> 
-    <NuxtLink class="custom-button" :to="`/articles${props.link}`"> 
-        {{ props.label }} 
+<template>
+    <NuxtLink class="custom__button" :to="`/articles${props.link}`">
+        {{ props.label }}
     </NuxtLink>
 </template>
 
 <script setup>
-
-const router = useRouter()
 const props = defineProps({
     link: {
         type: String,
@@ -17,11 +15,10 @@ const props = defineProps({
         required: true,
     },
 })
-
 </script>
 
 <style lang="scss" scoped>
-.custom-button {
+.custom__button {
     display: flex;
     justify-content: center;
     align-items: center;
