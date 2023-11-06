@@ -1,10 +1,10 @@
 <template>
     <div class="articles">
-        <div class="articles__title"> {{ articles.title }} </div>
+        <div class="articles__title"> {{ sectionData.title }} </div>
         <div class="articles__content">
             <div 
                 class="articles__content__post" 
-                v-for="post in articles.articles" 
+                v-for="post in sectionData.articles" 
             >
                 <PostBlock :body="post"/>
             </div>
@@ -17,7 +17,7 @@ import PostBlock from '../UI/PostBlock.vue';
 
 
 const props = defineProps({
-    articles: {
+    sectionData: {
         type: Object,
         required: true,
     },

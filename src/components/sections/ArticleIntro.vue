@@ -1,20 +1,20 @@
 <template>
     <div class="post">
         <div class="post__image__box" >
-            <img class="post__image" :src="props.intro.image">
+            <img class="post__image" :src="props.sectionData.image">
         </div>
         <div class="post__info">
-            <div class="info__title"> {{ props.intro.title  }}</div>
-            <div class="info__time"> {{ props.intro.reading_time + ' мин время чтения'}} </div>
-            <div class="info__views"> {{ props.intro.views_count + ' прочитали статью'}} </div>
-            <div class="info__text"> {{ props.intro.short_description }} </div>
+            <div class="info__title"> {{ props.sectionData.title  }}</div>
+            <div class="info__time"> {{ props.sectionData.reading_time + ' мин время чтения'}} </div>
+            <div class="info__views"> {{ props.sectionData.views_count + ' прочитали статью'}} </div>
+            <div class="info__text"> {{ props.sectionData.short_description }} </div>
         </div>
     </div>
 </template>
 
 <script setup>
     const props = defineProps({
-        intro: {
+        sectionData: {
             type: Object,
             required: true,
         }

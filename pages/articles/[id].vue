@@ -1,29 +1,45 @@
 <template>
-  <div v-for="section in store.posts.body" :key="store.posts.body.id">
-    <ArticleIntro v-if="section.type == 'article_intro_block'" :intro="section.data" />
-    <TextBlock v-else-if="section.type == 'text_block'" :text="section.data" />
-    <ImageBlock v-else-if="section.type == 'image_block'" :image="section.data"/>
-    <SliderBlock v-else-if="section.type == 'slider_block'" :images="section"/>
-    <SubscribeBar v-else-if="section.type == 'subscribe_form_block'"/>
-    <ArticleList v-else-if="section.type == 'article_list_block'" :articles="section.data"/>
-    <CtaForm v-else-if="section.type == 'cta_form_block'" />
-   </div>
+  <component 
+    v-for="section in store.posts.body" 
+    :is="getComponentName(section.type)" 
+    :sectionData="section.data" 
+    :key="section.id" 
+  />
 </template>
 
 <script setup>
+import article_intro_block from '~/src/components/sections/ArticleIntro.vue';
+import image_block from '~/src/components/sections/ImageBlock.vue';
+import subscribe_form_block from '~/src/components/sections/SubscribeBar.vue';
+import slider_block from '~/src/components/sections/SliderBlock.vue';
+import text_block from '~/src/components/sections/TextBlock.vue';
+import article_list_block from '~/src/components/sections/ArticleList.vue';
+import cta_form_block from '~/src/components/sections/CtaForm.vue';
+
 import { useStore } from '@/store/index'
-import ArticleIntro from '~/src/components/sections/ArticleIntro.vue';
-import ImageBlock from '~/src/components/sections/ImageBlock.vue';
-import SubscribeBar from '~/src/components/sections/SubscribeBar.vue';
-import SliderBlock from '~/src/components/sections/SliderBlock.vue';
-import TextBlock from '~/src/components/sections/TextBlock.vue';
-import ArticleList from '~/src/components/sections/ArticleList.vue';
-import CtaForm from '~/src/components/sections/CtaForm.vue';
+
 const store = useStore();
 const route = useRoute()
 const { fetchPosts } = store;
 
 await fetchPosts(route.params.id)
+
+function getComponentName(type) {
+  const components = {
+    article_intro_block,
+    image_block,
+    subscribe_form_block,    
+    // slider_block,
+    text_block,
+    article_list_block,
+    cta_form_block,
+  };
+
+  return components[type] || null;
+}
 </script>
+
+
+
 
 <style lang="scss" scoped></style>

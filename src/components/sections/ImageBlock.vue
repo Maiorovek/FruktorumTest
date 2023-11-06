@@ -1,15 +1,15 @@
 <template>
     <div class="image-block">
         <div class="image-box">
-            <img class="image" :src="image.src">
+            <img class="image" :src="sectionData.src">
         </div>
-        <div class="image-caption"> {{ image.caption }} </div>
+        <div class="image-caption"> {{ sectionData.caption }} </div>
     </div>
 </template>
 
 <script setup>
     const props = defineProps({
-        image: {
+        sectionData: {
             type: Object,
             required: true,
         }

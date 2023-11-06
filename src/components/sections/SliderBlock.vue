@@ -3,7 +3,7 @@
         <div class="sider-content">
             <CustomButton class="custom-button" @click="prevSlide" label="&lt;" />
             <div class="slider-wrapper">
-                <div class="slider-slide" v-for="(image, index) in images.data" :key="`${image.id}`">
+                <div class="slider-slide" v-for="(image, index) in sectionData.data" :key="`${image.id}`">
                     <transition name="slide-in">
                         <div class="slide" v-show="currentIndex === index">
                             <img class="image" :src="image" />
@@ -13,7 +13,7 @@
             </div>
             <CustomButton class="custom-button" @click="nextSlide" label="&gt;" />
         </div>
-        <div class="slider-counter"> {{ currentIndex + '/' + props.images.data.length }} </div>
+        <div class="slider-counter"> {{ currentIndex + '/' + props.sectionData.data.length }} </div>
     </div>
 </template>
   
@@ -22,7 +22,7 @@ import CustomButton from '../UI/Kit/CustomButton.vue';
 import { defineProps, ref } from 'vue';
 
 const props = defineProps({
-    images: {
+    sectionData: {
         type: Object,
         required: true,
     },
@@ -31,11 +31,11 @@ const props = defineProps({
 let currentIndex = ref(0);
 
 const nextSlide = () => {
-    currentIndex.value = (currentIndex.value + 1) % props.images.data.length;
+    currentIndex.value = (currentIndex.value + 1) % props.sectionData.data.length;
 };
 
 const prevSlide = () => {
-    currentIndex.value = (currentIndex.value - 1 + props.images.data.length) % props.images.data.length;
+    currentIndex.value = (currentIndex.value - 1 + props.sectionData.data.length) % props.sectionData.data.length;
 };
 </script>
   
