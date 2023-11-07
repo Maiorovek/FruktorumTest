@@ -1,5 +1,9 @@
 <template>
-        <ArticleList :sectionData="store.posts.body[0].data"></ArticleList>
+        <ArticleList 
+            v-for="post in store.posts.body" 
+            :key="post.id" 
+            :sectionData="post.data">
+        </ArticleList>
 </template>
 
 <script setup>
