@@ -13,17 +13,24 @@ export default defineNuxtConfig({
       },
     ],
   },
+  
   css: [
     '@/src/assets/index.scss',
+    'vuetify/lib/styles/main.sass',
+    '@mdi/font/css/materialdesignicons.min.css',
   ],
+  build: {
+    transpile: ['vuetify'],
+  },
+  vite: {
+    define: {
+      'process.env.DEBUG': false,
+    },
+  },
   modules: [
     '@pinia/nuxt',
-    'nuxt-swiper',
   ],
   pinia: {
     storesDirs: ['./store/**']
-  },
-  swiper: {
-    styleLang: 'scss',
   },
 })

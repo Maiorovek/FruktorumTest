@@ -4,7 +4,7 @@
         <div class="articles__content">
             <div 
                 class="articles__content__post" 
-                v-for="post in sectionData.articles.slice(0, 3)" 
+                v-for="post in sectionData.articles" 
             >
                 <PostBlock :body="post"/>
             </div>
