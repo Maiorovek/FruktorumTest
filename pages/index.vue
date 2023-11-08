@@ -1,5 +1,5 @@
 <template>
-    <ArticleList :sectionData="store.posts.body[0].data"/>
+    <ArticleList :sectionData="store.getPosts.body[0].data"/>
 </template>
 
 <script setup>
@@ -11,9 +11,9 @@ const { fetchPosts } = store;
 await fetchPosts();
 
 useHead({
-    title: `${store.posts.meta.title}`,
+    title: `${store.getPosts.meta.title}`,
     meta: [
-        { name: 'description', content: `${store.posts.meta.description}` }
+        { name: 'description', content: `${store.getPosts.meta.description}` }
     ],
 })
 </script>

@@ -1,6 +1,6 @@
 <template>
   <component 
-    v-for="section in store.posts.body" 
+    v-for="section in store.getPosts.body" 
     :is="getComponentName(section.type)" 
     :sectionData="section.data" 
     :key="section.id" 
@@ -36,9 +36,9 @@ function getComponentName(type) {
 }
 
 useHead({
-    title: `${store.posts.meta.title}`,
+    title: `${store.getPosts.meta.title}`,
     meta: [
-    { name: 'description', content: `${store.posts.meta.description}` }
+    { name: 'description', content: `${store.getPosts.meta.description}` }
   ],
 })
 </script>

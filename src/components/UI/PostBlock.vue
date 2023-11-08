@@ -1,9 +1,9 @@
 <template>
     <div class="post-block">
-        <div class="post-block__image__box">
-            <img class="post__image" :src="body.image">
+        <div class="post-block-image-box">
+            <img class="post-image" :src="body.image">
         </div>
-        <div class="post-block__text">
+        <div class="post-block-text">
             {{ body.title }}
         </div>
         <CustomRouteButton :link="body.link" label="Читать" />
@@ -31,20 +31,20 @@ const props = defineProps({
     flex-direction: column;
     justify-content: space-between;
 
-    &__image__box {
+    &-image-box {
         max-height: 320px;
         max-width: 100%;
         border-radius: 2px;
         overflow: hidden;
 
-        .post__image {
+        .post-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
 
-    &__text {
+    &-text {
         margin-top: 20px;
         margin-bottom: 30px;
         max-width: 100%;

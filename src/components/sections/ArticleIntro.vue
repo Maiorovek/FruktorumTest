@@ -1,13 +1,13 @@
 <template>
     <div class="post">
-        <div class="image__box" >
-            <img class="post__image" :src="sectionData.image">
+        <div class="image-box" >
+            <img class="post-image" :src="sectionData.image">
         </div>
-        <div class="post__info">
-            <div class="info__title"> {{ sectionData.title  }}</div>
-            <div class="info__time"> {{ sectionData.reading_time + ' мин время чтения'}} </div>
-            <div class="info__views"> {{ sectionData.views_count + ' прочитали статью'}} </div>
-            <div class="info__text"> {{ sectionData.short_description }} </div>
+        <div class="post-info">
+            <div class="info-title"> {{ sectionData.title  }}</div>
+            <div class="info-time"> {{ `${sectionData.reading_time} мин время чтения`}} </div>
+            <div class="info-views"> {{ `${sectionData.views_count} прочитали статью`}} </div>
+            <div class="info-text"> {{ sectionData.short_description }} </div>
         </div>
     </div>
 </template>
@@ -28,7 +28,7 @@
         align-items: center;
         margin-bottom: 100px;
 
-        .image__box {
+        .image-box {
             margin-right: 30px;
             max-width: 541px;
             max-height: 580px;
@@ -36,17 +36,17 @@
             border-top-right-radius: 40%;
             overflow: hidden;
 
-            .post__image {
+            .post-image {
                 width: 100%;
                 height: 100%;
                 object-fit: cover
             }
         }
 
-        &__info {
+        &-info {
             max-width: 60%;
             
-            .info__title {
+            .info-title {
                 margin-bottom: 30px;
                 font-size: 56px;
                 font-weight: 800;
@@ -54,23 +54,21 @@
                 color: #1B1B1B;
             }
 
-            .info__time, .info__views {
+            .info-time, .info-views {
                 margin-bottom: 4px;
                 font-size: 14px;
                 font-weight: 400px;
                 line-height: 20px;
                 color: #8D959C;
-
             }
 
-            .info__text {
+            .info-text {
                 margin-top: 50px;
                 font-size: 18px;
                 font-weight: 400px;
                 line-height: 26px;
                 color: #1B1B1B;
             }
-
         }
     }
 </style>

@@ -1,9 +1,9 @@
 <template>
-    <div class="image__block">
-        <div class="image__box">
+    <div class="image-block">
+        <div class="image-box">
             <img class="image" :src="sectionData.src">
         </div>
-        <div class="image__caption"> {{ sectionData.caption }} </div>
+        <div class="image-caption"> {{ sectionData.caption }} </div>
     </div>
 </template>
 
@@ -17,13 +17,13 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.image__block {
+.image-block {
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
     width: 100%;
 
-    .image__box {
+    .image-box {
         border-radius: 2px;
         border-top-right-radius: 220px;
         overflow: hidden;
@@ -35,7 +35,7 @@ const props = defineProps({
         }
     }
 
-    .image__caption {
+    .image-caption {
         margin-left: auto;
         font-size: 14px;
         font-weight: 400;

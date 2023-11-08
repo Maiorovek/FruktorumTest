@@ -5,7 +5,9 @@ export const useStore = defineStore('posts', {
   state: () => ({
     posts: [],
   }),
-  getters: {},
+  getters: {
+    getPosts: (state) => state.posts 
+  },
   actions: {
     async fetchPosts(path = "") {
       try {

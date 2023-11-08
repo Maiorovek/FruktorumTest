@@ -1,5 +1,5 @@
 <template>
-    <button class="custom__button">
+    <button class="custom-button">
         {{ props.label }}
     </button>
 </template>
@@ -14,7 +14,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.custom__button {
+.custom-button {
     max-width: 164px;
     max-height: 46px;
     padding: 10px;

@@ -1,7 +1,7 @@
 <template>
     <div class="logo">
-        <div class="logo__content"> Test </div>
-        <div class="logo__content"> Blog </div>
+        <div class="logo-content"> Test </div>
+        <div class="logo-content"> Blog </div>
     </div>
 </template>
 
@@ -14,7 +14,7 @@
     font-weight: 800;
     display: flex;
 
-    &__content {
+    &-content {
         height: 32px;
 
         &:first-child {

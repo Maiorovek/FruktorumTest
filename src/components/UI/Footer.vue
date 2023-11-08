@@ -1,19 +1,19 @@
 <template>
     <div class="footer">
-        <div class="footer__content">
-            <div class="content__info">
+        <div class="footer-content">
+            <div class="content-info">
                 <MainLogo/>
-                <div class="content__text">
+                <div class="content-text">
                     Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая
                     мир эстетики и креативности
                 </div>
             </div>
-            <div class="footer__content__links">
-                <div class="links__mail">
-                    <div class="mail__name"> email </div>
-                    <div class="mail__description"> testblogsupport@gmail.com </div>
+            <div class="footer-content-links">
+                <div class="links-mail">
+                    <div class="mail-name"> email </div>
+                    <div class="mail-description" > testblogsupport@gmail.com </div>
                 </div>
-                <div class="links__icons">
+                <div class="links-icons">
                     <div class="icon"> </div>
                     <div class="icon"> </div>
                     <div class="icon"> </div>
@@ -34,16 +34,16 @@ import MainLogo from './Kit/MainLogo.vue';
 .footer {
     border-top: 1px solid #8D959C;
 
-    &__content {
+    &-content {
         margin-top: 50px;
         margin-bottom: 70px;
         display: flex;
         justify-content: space-between;
         font-weight: 400;
 
-        .content__info {
+        .content-info {
 
-            .content__text {
+            .content-text {
                 margin-top: 20px;
                 max-width: 400px;
                 font-size: 14px;
@@ -53,25 +53,25 @@ import MainLogo from './Kit/MainLogo.vue';
             }
         }
 
-        &__links {
+        &-links {
             margin-right: 78px;
 
-            .links__mail {
+            .link-mail {
 
-                .mail__name {
+                .mail-name {
                     font-size: 14px;
                     line-height: 20px;
                     color: #8D959C;
                 }
 
-                .mail__description {
+                .mail-description {
                     font-size: 18px;
                     line-height: 22px;
                     color: #1B1B1B;
                 }
             }
 
-            .links__icons {
+            .links-icons {
                 display: flex;
 
                 .icon {

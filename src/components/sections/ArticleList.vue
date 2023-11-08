@@ -1,9 +1,9 @@
 <template>
     <div class="articles">
-        <div class="articles__title"> {{ sectionData.title }} </div>
-        <div class="articles__content">
+        <div class="articles-title"> {{ sectionData.title }} </div>
+        <div class="articles-content">
             <div 
-                class="articles__content__post" 
+                class="articles-content-post" 
                 v-for="post in sectionData.articles" 
             >
                 <PostBlock :body="post"/>
@@ -29,20 +29,20 @@ const props = defineProps({
 .articles {
     margin-bottom: 100px;
 
-    &__title {
+    &-title {
         font-size: 34px;
         font-weight: 800;
         line-height: 46px;
         margin-bottom: 50px;
     }
 
-    &__content {
+    &-content {
         display: grid;
         grid-template-columns: 30% 30% 30%;
         justify-content: space-between;
         grid-row-gap: 50px;
 
-        &__post {
+        &-post {
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink class="custom__button" :to="`/articles${props.link}`">
+    <NuxtLink class="custom-button" :to="`/articles${props.link}`">
         {{ props.label }}
     </NuxtLink>
 </template>
@@ -18,7 +18,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.custom__button {
+.custom-button {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,8 +1,8 @@
 <template>
-    <div class="subscribe__bar">
-        <div class="subscribe__bar__title"> Подпишись на рассылку </div>
-        <CustomInput class="subscribe__bar__input" label="Email" type="email" />
-        <CustomButton class="subscribe__bar__btn" label="Подписаться" />
+    <div class="subscribe-bar">
+        <div class="subscribe-bar-title"> Подпишись на рассылку </div>
+        <CustomInput class="subscribe-bar-input" label="Email" type="email" />
+        <CustomButton class="subscribe-bar-btn" label="Подписаться" />
     </div>
 </template>
 
@@ -12,7 +12,7 @@ import CustomInput from '@/src/components/UI/Kit/CustomInput.vue';
 </script>
 
 <style lang="scss" scoped>
-.subscribe__bar {
+.subscribe-bar {
     margin-bottom: 100px;
     height: 100px;
     display: flex;
@@ -21,7 +21,7 @@ import CustomInput from '@/src/components/UI/Kit/CustomInput.vue';
     border-radius: 2px;
     background-color: #1B1B1B;
 
-    &__title {
+    &-title {
         margin-left: 30px;
         margin-right: auto;
         font-size: 22px;
@@ -30,11 +30,11 @@ import CustomInput from '@/src/components/UI/Kit/CustomInput.vue';
         color: white;
     }
 
-    &__input {
+    &-input {
         margin-right: 37px;
     }
 
-    &__btn {
+    &-btn {
         margin-right: 30px;
     }
 }
