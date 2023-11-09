@@ -1,7 +1,5 @@
-<template>
-    <button class="custom-button">
-        {{ props.label }}
-    </button>
+<template lang="pug">
+button.custom-button(v-text="props.label")
 </template>
 
 <script setup>

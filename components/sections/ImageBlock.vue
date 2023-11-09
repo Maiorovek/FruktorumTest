@@ -1,10 +1,8 @@
-<template>
-    <div class="image-block">
-        <div class="image-box">
-            <img class="image" :src="sectionData.src">
-        </div>
-        <div class="image-caption"> {{ sectionData.caption }} </div>
-    </div>
+<template lang="pug">
+div.image-block
+    div.image-box
+        img.image(:src="sectionData.src")
+    div.image-caption {{ sectionData.caption }}
 </template>
 
 <script setup>

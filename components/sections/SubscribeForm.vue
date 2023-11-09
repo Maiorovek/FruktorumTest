@@ -1,14 +1,11 @@
-<template>
-    <div class="subscribe-bar">
-        <div class="subscribe-bar-title"> Подпишись на рассылку </div>
-        <CustomInput class="subscribe-bar-input" label="Email" type="email" />
-        <CustomButton class="subscribe-bar-btn" label="Подписаться" />
-    </div>
+<template lang="pug">
+div.subscribe-bar
+    div.subscribe-bar-title(v-text="'Подпишись на рассылку'") 
+    CustomInput.subscribe-bar-input(label="Email" type="email")
+    CustomButton.subscribe-bar-btn(label="Подписаться")
 </template>
 
 <script setup>
-import CustomButton from '@/src/components/UI/Kit/CustomButton.vue';
-import CustomInput from '@/src/components/UI/Kit/CustomInput.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -28,6 +25,10 @@ import CustomInput from '@/src/components/UI/Kit/CustomInput.vue';
         font-weight: 800;
         line-height: 30px;
         color: white;
+
+        @media only screen and (max-width: 900px) {
+            font-size: 12px;
+        }
     }
 
     &-input {

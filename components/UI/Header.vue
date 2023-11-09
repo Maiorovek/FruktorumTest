@@ -1,13 +1,11 @@
-<template>
-    <div class="header">
-        <MainLogo/>
-    </div>
+<template lang="pug">
+div.header
+    Logo
 </template>
-
+    
 <script setup>
-import MainLogo from './Kit/MainLogo.vue';
 </script>
-
+    
 <style lang="scss" scoped>
 .header {
     margin-top: 26px;

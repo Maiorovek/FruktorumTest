@@ -1,7 +1,5 @@
-<template>
-    <NuxtLink class="custom-button" :to="`/articles${props.link}`">
-        {{ props.label }}
-    </NuxtLink>
+<template lang="pug">
+NuxtLink.custom-button(:to="`/articles${props.link}`") {{ props.label }}
 </template>
 
 <script setup>

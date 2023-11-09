@@ -1,28 +1,18 @@
-<template>
-    <div class="articles">
-        <div class="articles-title"> {{ sectionData.title }} </div>
-        <div class="articles-content">
-            <div 
-                class="articles-content-post" 
-                v-for="post in sectionData.articles" 
-            >
-                <PostBlock :body="post"/>
-            </div>
-        </div>
-    </div>
-</template>
+<template lang="pug">
+div.articles
+    div.articles-title(v-if="store.getPosts.page_type !== 'home'" v-text="sectionData.title")
+    div.articles-content 
+        PostBlock(v-for="post in sectionData.articles" :body="post")
+</template> 
 
 <script setup>
-import PostBlock from '../UI/PostBlock.vue';
-
-
+const store = useStore();
 const props = defineProps({
     sectionData: {
         type: Object,
         required: true,
     },
 })
-
 </script>
 
 <style lang="scss" scoped>
@@ -38,7 +28,7 @@ const props = defineProps({
 
     &-content {
         display: grid;
-        grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 32% 32% 32%;
         justify-content: space-between;
         grid-row-gap: 50px;
 

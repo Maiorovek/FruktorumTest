@@ -1,15 +1,12 @@
-<template>
-    <div class="post">
-        <div class="image-box" >
-            <img class="post-image" :src="sectionData.image">
-        </div>
-        <div class="post-info">
-            <div class="info-title"> {{ sectionData.title  }}</div>
-            <div class="info-time"> {{ `${sectionData.reading_time} мин время чтения`}} </div>
-            <div class="info-views"> {{ `${sectionData.views_count} прочитали статью`}} </div>
-            <div class="info-text"> {{ sectionData.short_description }} </div>
-        </div>
-    </div>
+<template lang="pug">
+div.post
+    div.image-box
+        img.post-image(:src='sectionData.image')
+    div.post-info
+        div.info-title {{ sectionData.title }}
+        div.info-time {{ `${sectionData.reading_time} мин время чтения` }}
+        div.info-views {{ `${sectionData.views_count} прочтили статью` }}
+        div.info-text {{ sectionData.short_description }}
 </template>
 
 <script setup>
@@ -52,6 +49,12 @@
                 font-weight: 800;
                 line-height: 66px;
                 color: #1B1B1B;
+
+                @media only screen and (max-width: 1024px) {
+                    font-size: 35px;
+                    line-height: 40px;
+                    margin-bottom: 10px;
+                }
             }
 
             .info-time, .info-views {
@@ -68,6 +71,10 @@
                 font-weight: 400px;
                 line-height: 26px;
                 color: #1B1B1B;
+
+                @media only screen and (max-width: 1024px) {
+                    margin-top: 10px;
+                }
             }
         }
     }
