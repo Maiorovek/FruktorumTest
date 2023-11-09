@@ -1,12 +1,12 @@
 <template lang="pug">
-div(class='post')
-    div(class='image-box')
-        img(class='post-image' :src='sectionData.image')
-    div(class='post-info')
-        div(class='info-title') {{ sectionData.title }}
-        div(class='info-time') {{ `${sectionData.reading_time} мин время чтения` }}
-        div(class='info-views') {{ `${sectionData.views_count} прочтили статью` }}
-        div(class='info-text') {{ sectionData.short_description }}
+div.post
+    div.image-box
+        img.post-image(:src='sectionData.image')
+    div.post-info
+        div.info-title {{ sectionData.title }}
+        div.info-time {{ `${sectionData.reading_time} мин время чтения` }}
+        div.info-views {{ `${sectionData.views_count} прочтили статью` }}
+        div.info-text {{ sectionData.short_description }}
 </template>
 
 <script setup>

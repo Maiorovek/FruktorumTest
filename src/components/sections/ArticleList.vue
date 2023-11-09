@@ -1,9 +1,9 @@
 <template lang="pug">
-div(class="articles")
-    div(class="articles-title") {{ sectionData.title }}
-    div(class="articles-content") 
-        div(class="articles-content-post" v-for="post in sectionData.articles")
-            PostBlock( :body="post")
+div.articles
+    div.articles-title {{ sectionData.title }}
+    div.articles-content 
+        div.articles-content-post(v-for="post in sectionData.articles")
+            PostBlock(:body="post")
 </template>
 
 <script setup>

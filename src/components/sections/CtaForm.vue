@@ -1,10 +1,10 @@
 <template lang="pug">
-div(class="form-block")
-    div(class="form-image")
-        img(class="image" :src="store.getPosts.body[0].data.image" alt="")
-    div(class="form-content")
-        div(class="form-title" v-text="'Стань участником проекта'")
-        div(class="form-inputs")
+div.form-block
+    div.form-image
+        img.image(:src="store.getPosts.body[0].data.image" alt="")
+    div.form-content
+        div.form-title(v-text="'Стань участником проекта'")
+        div.form-inputs
             CustomInput(label="Имя" type="text")
             CustomInput(label="Телефон" type="tel")
             CustomInput(label="Email" type="email")

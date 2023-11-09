@@ -1,8 +1,8 @@
 <template lang="pug">
-div(class="image-block")
-    div(class="image-box")
-        img(class="image" :src="sectionData.src")
-    div(class="image-caption") {{ sectionData.caption }}
+div.image-block
+    div.image-box
+        img.image(:src="sectionData.src")
+    div.image-caption {{ sectionData.caption }}
 </template>
 
 <script setup>
