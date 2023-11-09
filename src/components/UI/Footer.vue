@@ -1,28 +1,19 @@
-<template>
-    <div class="footer">
-        <div class="footer-content">
-            <div class="content-info">
-                <MainLogo/>
-                <div class="content-text">
-                    Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая
-                    мир эстетики и креативности
-                </div>
-            </div>
-            <div class="footer-content-links">
-                <div class="links-mail">
-                    <div class="mail-name"> email </div>
-                    <div class="mail-description" > testblogsupport@gmail.com </div>
-                </div>
-                <div class="links-icons">
-                    <div class="icon"> </div>
-                    <div class="icon"> </div>
-                    <div class="icon"> </div>
-                    <div class="icon"> </div>
-                </div>
-            </div>
-        </div>
-        <SubscribeForm style="margin-bottom: 0;"/>
-    </div>
+<template lang="pug">
+div.footer
+    div.footer-content
+        div.content-info
+            MainLogo
+            div.content-text(v-text="'Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая мир эстетики и креативности'")  
+        div.footer-content-links
+            div.links-mail
+                div.mail-name(v-text="'email'") 
+                div.mail-description(href="mailto:testblogsupport@gmail.com" v-text="'testblogsupport@gmail.com'")
+            div.links-icons
+                div.icon
+                div.icon
+                div.icon
+                div.icon
+    SubscribeForm.sub-form
 </template>
 
 <script setup>
@@ -33,6 +24,10 @@ import MainLogo from './Kit/MainLogo.vue';
 <style lang="scss" scoped>
 .footer {
     border-top: 1px solid #8D959C;
+
+    .sub-form {
+        margin-bottom: 0px;
+    }
 
     &-content {
         margin-top: 50px;

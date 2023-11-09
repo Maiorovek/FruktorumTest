@@ -1,8 +1,7 @@
-<template>
-    <div class="logo">
-        <div class="logo-content"> Test </div>
-        <div class="logo-content"> Blog </div>
-    </div>
+<template lang="pug">
+div.logo
+    div.logo-content(v-text="'Test'")
+    div.logo-content(v-text="'Blog'") 
 </template>
 
 <script setup>

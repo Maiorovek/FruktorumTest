@@ -1,7 +1,6 @@
-<template>
-    <div class="header">
-        <MainLogo/>
-    </div>
+<template lang="pug">
+div.header
+    MainLogo
 </template>
 
 <script setup>

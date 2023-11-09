@@ -1,19 +1,14 @@
-<template>
-    <div class="post-block">
-        <div class="post-block-image-box">
-            <img class="post-image" :src="body.image">
-        </div>
-        <div class="post-block-text">
-            {{ body.title }}
-        </div>
-        <CustomRouteButton :link="body.link" label="Читать" />
-
-    </div>
+<template lang="pug">
+div.post-block
+    div.post-block-image-box
+        img.post-image(:src="body.image")
+    div.post-block-text(v-text="body.title")
+    CustomRouteButton(:link="body.link" label="Читать")
 </template>
 
 <script setup>
-import { useStore } from '@/store/index'
 import CustomRouteButton from "./Kit/CustomRouteButton.vue";
+import { useStore } from '@/store/index'
 const store = useStore();
 
 const props = defineProps({

@@ -1,9 +1,5 @@
-<template>
-    <input 
-        class="custom-input" 
-        required="true" 
-        :type="type" 
-        :placeholder="label">
+<template lang="pug">
+input.custom-input(required="true" :type="type" :placeholder="label")
 </template>
 
 <script setup>
