@@ -1,9 +1,8 @@
-<template>
-    <div class="subscribe-bar">
-        <div class="subscribe-bar-title"> Подпишись на рассылку </div>
-        <CustomInput class="subscribe-bar-input" label="Email" type="email" />
-        <CustomButton class="subscribe-bar-btn" label="Подписаться" />
-    </div>
+<template lang="pug">
+div(class="subscribe-bar")
+    div(class="subscribe-bar-title" v-text="'Подпишись на рассылку'") 
+    CustomInput(class="subscribe-bar-input" label="Email" type="email")
+    CustomButton(class="subscribe-bar-btn" label="Подписаться")
 </template>
 
 <script setup>

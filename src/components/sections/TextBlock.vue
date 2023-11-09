@@ -1,5 +1,5 @@
-<template>
-    <div class="text-block" v-html="sectionData"/>
+<template lang="pug">
+div(class="text-block" v-html="sectionData")
 </template>
 
 <script setup>

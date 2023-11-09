@@ -1,15 +1,9 @@
-<template>
-    <div class="articles">
-        <div class="articles-title"> {{ sectionData.title }} </div>
-        <div class="articles-content">
-            <div 
-                class="articles-content-post" 
-                v-for="post in sectionData.articles" 
-            >
-                <PostBlock :body="post"/>
-            </div>
-        </div>
-    </div>
+<template lang="pug">
+div(class="articles")
+    div(class="articles-title") {{ sectionData.title }}
+    div(class="articles-content") 
+        div(class="articles-content-post" v-for="post in sectionData.articles")
+            PostBlock( :body="post")
 </template>
 
 <script setup>

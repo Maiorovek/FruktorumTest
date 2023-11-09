@@ -24,13 +24,13 @@ await fetchPosts(route.params.id)
 
 function getComponentName(type) {
   const components = {
-    article_intro_block,
-    image_block,
-    subscribe_form_block,    
-    slider_block,
-    text_block,
-    article_list_block,
-    cta_form_block,
+    article_intro_block, //готов
+    image_block, //готов
+    subscribe_form_block, //готов    
+    slider_block, // разобраться с <
+    text_block, // готов
+    article_list_block, //готов
+    cta_form_block, //готов
   };
   return components[type] || null;
 }

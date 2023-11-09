@@ -1,13 +1,10 @@
-<template>
-    <v-carousel class="carousel" hide-delimiters>
-        <template v-slot:prev="{ props }" placement top>
-            <CustomButton class="carousel-button" @click="props.onClick" label="<" />
-        </template>
-        <template v-slot:next="{ props }">
-            <CustomButton class="carousel-button" @click="props.onClick" label=">" />
-        </template>
-        <v-carousel-item v-for="image in sectionData" :src="image" fit />
-    </v-carousel>
+<template lang="pug">
+v-carousel(class="carousel" hide-delimiters)
+    template(v-slot:prev="{ props }" placement top)
+        CustomButton(class="carousel-button" @click="props.onClick" label="")
+    template(v-slot:next="{ props }")
+        CustomButton(class="carousel-button" @click="props.onClick" label=">")
+    v-carousel-item(v-for="image in sectionData" :src="image" fit)
 </template>
 
 <script setup>
