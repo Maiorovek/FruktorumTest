@@ -1,10 +1,5 @@
-<template>
-  <component 
-    v-for="section in store.getPosts.body" 
-    :is="getComponentName(section.type)" 
-    :sectionData="section.data" 
-    :key="section.id" 
-  />
+<template lang="pug">
+component(v-for="section in store.getPosts.body" :is="getComponentName(section.type)" :sectionData="section.data" :key="section.id")
 </template>
 
 <script setup>

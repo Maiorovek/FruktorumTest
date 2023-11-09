@@ -1,5 +1,5 @@
-<template>
-    <ArticleList :sectionData="store.getPosts.body[0].data"/>
+<template lang="pug">
+ArticleList(:sectionData="store.getPosts.body[0].data")
 </template>
 
 <script setup>
