@@ -2,7 +2,7 @@
 div.footer
     div.footer-content
         div.content-info
-            MainLogo
+            Logo
             div.content-text(v-text="'Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая мир эстетики и креативности'")  
         div.footer-content-links
             div.links-mail
@@ -17,8 +17,6 @@ div.footer
 </template>
 
 <script setup>
-import SubscribeForm from '../sections/SubscribeForm.vue';
-import MainLogo from './Kit/MainLogo.vue';
 </script>
 
 <style lang="scss" scoped>

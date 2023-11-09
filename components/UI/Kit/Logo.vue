@@ -3,10 +3,10 @@ div.logo
     div.logo-content(v-text="'Test'")
     div.logo-content(v-text="'Blog'") 
 </template>
-
+    
 <script setup>
 </script>
-
+    
 <style lang="scss" scoped>
 .logo {
     height: 32px;

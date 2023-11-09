@@ -6,16 +6,16 @@ export const useStore = defineStore('posts', {
     posts: [],
   }),
   getters: {
-    getPosts: (state) => state.posts 
+    getPosts: (state) => state.posts
   },
   actions: {
     async fetchPosts(path = "") {
-      try {
-        const response = await axios.get(`https://devtwit8.ru/api/v1/page/?path=/${path}`);
-        this.posts = response.data;
-      } catch (error) {
-        console.error(error);
-      }
+      await axios.get(`https://devtwit8.ru/api/v1/page/?path=/${path}`)
+        .then((response) => {
+          this.posts = response.data
+        }, (error) => {
+          console.log(error);
+        });
     },
   },
 });

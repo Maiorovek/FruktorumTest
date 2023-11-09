@@ -8,8 +8,6 @@ v-carousel.carousel(hide-delimiters)
 </template>
 
 <script setup>
-import CustomButton from '../UI/Kit/CustomButton.vue';
-
 const props = defineProps({
     sectionData: {
         type: Object,

@@ -3,7 +3,6 @@ button.custom-button(v-text="props.label")
 </template>
 
 <script setup>
-
 const props = defineProps({
     label: {
         type: String,

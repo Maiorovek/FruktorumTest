@@ -6,8 +6,6 @@ div.subscribe-bar
 </template>
 
 <script setup>
-import CustomButton from '@/src/components/UI/Kit/CustomButton.vue';
-import CustomInput from '@/src/components/UI/Kit/CustomInput.vue';
 </script>
 
 <style lang="scss" scoped>

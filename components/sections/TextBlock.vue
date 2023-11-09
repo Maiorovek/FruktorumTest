@@ -3,7 +3,6 @@ div.text-block(v-html="sectionData")
 </template>
 
 <script setup>
-
 const props = defineProps({
     sectionData: {
         type: String,

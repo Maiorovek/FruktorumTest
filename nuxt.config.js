@@ -12,7 +12,12 @@ export default defineNuxtConfig({
       },
     ],
   },
-  
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
   css: [
     '@/src/assets/index.scss',
     'vuetify/lib/styles/main.sass',

@@ -7,7 +7,6 @@ div.post-block
 </template>
 
 <script setup>
-import CustomRouteButton from "./Kit/CustomRouteButton.vue";
 import { useStore } from '@/store/index'
 const store = useStore();
 

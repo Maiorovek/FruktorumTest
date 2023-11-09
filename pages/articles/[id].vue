@@ -3,13 +3,13 @@ component(v-for="section in store.getPosts.body" :is="getComponentName(section.t
 </template>
 
 <script setup>
-import article_intro_block from '~/src/components/sections/ArticleIntro.vue';
-import image_block from '~/src/components/sections/ImageBlock.vue';
-import subscribe_form_block from '~/src/components/sections/SubscribeForm.vue';
-import slider_block from '~/src/components/sections/SliderBlock.vue';
-import text_block from '~/src/components/sections/TextBlock.vue';
-import article_list_block from '~/src/components/sections/ArticleList.vue';
-import cta_form_block from '~/src/components/sections/CtaForm.vue';
+import article_intro_block from '@/components/sections/ArticleIntro.vue';
+import image_block from '@/components/sections/ImageBlock.vue';
+import subscribe_form_block from '@/components/sections/SubscribeForm.vue';
+import slider_block from '@/components/sections/SliderBlock.vue';
+import text_block from '@/components/sections/TextBlock.vue';
+import article_list_block from '@/components/sections/ArticleList.vue';
+import cta_form_block from '@/components/sections/CtaForm.vue';
 
 const store = useStore();
 const route = useRoute()

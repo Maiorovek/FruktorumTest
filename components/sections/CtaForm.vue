@@ -12,9 +12,6 @@ div.form-block
 </template>
 
 <script setup>
-import CustomButton from '../UI/Kit/CustomButton.vue';
-import CustomInput from '../UI/Kit/CustomInput.vue';
-
 const store = useStore();
 </script>
 

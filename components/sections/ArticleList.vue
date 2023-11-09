@@ -4,19 +4,15 @@ div.articles
     div.articles-content 
         div.articles-content-post(v-for="post in sectionData.articles")
             PostBlock(:body="post")
-</template>
+</template> 
 
 <script setup>
-import PostBlock from '../UI/PostBlock.vue';
-
-
 const props = defineProps({
     sectionData: {
         type: Object,
         required: true,
     },
 })
-
 </script>
 
 <style lang="scss" scoped>
