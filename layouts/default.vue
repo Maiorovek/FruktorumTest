@@ -1,9 +1,8 @@
-<template>
-    <div class="wrapper">
-        <Header/>
-            <slot/>
-        <Footer/>
-    </div>
+<template lang="pug">
+div.wrapper
+    Header
+    slot
+    Footer
 </template>
 
 <script setup>
