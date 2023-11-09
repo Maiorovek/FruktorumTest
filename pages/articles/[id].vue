@@ -17,6 +17,10 @@ const { fetchPosts } = store;
 
 await fetchPosts(route.params.id)
 
+if (store.error) {
+  navigateTo('/')
+}
+
 function getComponentName(type) {
   const components = {
     article_intro_block, //готов
@@ -31,9 +35,9 @@ function getComponentName(type) {
 }
 
 useHead({
-    title: `${store.getPosts.meta.title}`,
+    title: `${store.getPosts?.meta?.title}`,
     meta: [
-    { name: 'description', content: `${store.getPosts.meta.description}` }
+    { name: 'description', content: `${store.getPosts?.meta?.description}` }
   ],
 })
 </script>
