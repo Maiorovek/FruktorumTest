@@ -49,6 +49,12 @@ div.post
                 font-weight: 800;
                 line-height: 66px;
                 color: #1B1B1B;
+
+                @media only screen and (max-width: 1024px) {
+                    font-size: 35px;
+                    line-height: 40px;
+                    margin-bottom: 10px;
+                }
             }
 
             .info-time, .info-views {
@@ -65,6 +71,10 @@ div.post
                 font-weight: 400px;
                 line-height: 26px;
                 color: #1B1B1B;
+
+                @media only screen and (max-width: 1024px) {
+                    margin-top: 10px;
+                }
             }
         }
     }

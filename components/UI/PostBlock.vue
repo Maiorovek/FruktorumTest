@@ -48,6 +48,10 @@ const props = defineProps({
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 }
 </style>

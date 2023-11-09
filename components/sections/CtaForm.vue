@@ -44,6 +44,11 @@ const store = useStore();
             font-weight: 800;
             line-height: 46px;
             color: white;
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 20px;
+                line-height: 30px;
+            }
         }
 
         .form-inputs {
@@ -52,8 +57,17 @@ const store = useStore();
             margin-top: 50px;
             margin-bottom: 50px;
 
+            @media only screen and (max-width: 1024px) {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
             &>* {
                 margin-top: 25px;
+
+                @media only screen and (max-width: 1024px) {
+                    margin-top: 20px
+                }
             }
         }
     }

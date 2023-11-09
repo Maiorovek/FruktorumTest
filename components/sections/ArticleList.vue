@@ -1,12 +1,12 @@
 <template lang="pug">
 div.articles
-    div.articles-title {{ sectionData.title }}
+    div.articles-title(v-if="store.getPosts.page_type !== 'home'" v-text="sectionData.title")
     div.articles-content 
-        div.articles-content-post(v-for="post in sectionData.articles")
-            PostBlock(:body="post")
+        PostBlock(v-for="post in sectionData.articles" :body="post")
 </template> 
 
 <script setup>
+const store = useStore();
 const props = defineProps({
     sectionData: {
         type: Object,
@@ -28,7 +28,7 @@ const props = defineProps({
 
     &-content {
         display: grid;
-        grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 32% 32% 32%;
         justify-content: space-between;
         grid-row-gap: 50px;
 

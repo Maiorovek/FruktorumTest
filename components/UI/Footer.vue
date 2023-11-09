@@ -43,6 +43,10 @@ div.footer
                 line-height: 20px;
                 color: #8D959C;
 
+                @media only screen and (max-width: 768px) {
+                    font-size: 10px;
+                    max-width: 250px;
+                }
             }
         }
 

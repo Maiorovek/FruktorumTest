@@ -26,6 +26,13 @@ const props = defineProps({
         font-weight: 800;
         line-height: 46px;
         color: #1B1B1B;
+
+        @media only screen and (max-width: 1024px) {
+            margin-bottom: 15px;
+            font-size: 24px;
+            line-height: 36px;
+        }
+        
     }
 
     p {
@@ -33,6 +40,12 @@ const props = defineProps({
         font-size: 18px;
         font-weight: 400;
         line-height: 26px;
+
+        @media only screen and (max-width: 1024px) {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 23px;
+        }
     }
 
     ul {
@@ -40,11 +53,21 @@ const props = defineProps({
         margin-left: 15%;
         margin-bottom: 20px;
 
+        @media only screen and (max-width: 1024px) {
+            margin-bottom: 10px;
+        }
+
         li {
             list-style-type: none;
             font-size: 18px;
             font-weight: 400;
             line-height: 26px;
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 16px;
+                line-height: 23px;
+
+            }
 
             &:before {
                 content: '\25C6';

@@ -25,6 +25,10 @@ div.subscribe-bar
         font-weight: 800;
         line-height: 30px;
         color: white;
+
+        @media only screen and (max-width: 900px) {
+            font-size: 12px;
+        }
     }
 
     &-input {
