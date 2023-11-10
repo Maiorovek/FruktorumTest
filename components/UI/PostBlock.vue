@@ -3,7 +3,7 @@ div.post-block
     div.post-block-image-box
         img.post-image(:src="body.image")
     div.post-block-text(v-text="body.title")
-    CustomRouteButton(:link="body.link" label="Читать")
+    CustomButton(:link="body.link" label="Читать" )
 </template>
 
 <script setup>

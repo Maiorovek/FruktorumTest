@@ -1,17 +1,43 @@
 <template lang="pug">
-button.custom-button(v-text="props.label")
+NuxtLink.custom-route-button(v-if="link != ''" :to="link") {{ props.label }}
+button.custom-button(v-else @click="" v-text="label")
 </template>
-
+    
 <script setup>
 const props = defineProps({
+    link: {
+        type: String,
+        default: '',
+    },
     label: {
         type: String,
         required: true,
     },
+
 })
 </script>
-
+    
 <style lang="scss" scoped>
+.custom-route-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 164px;
+    max-height: 46px;
+    padding: 10px;
+    border: 1px;
+    border-radius: 2px;
+    background-color: #1B1B1B;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #3657D3;
+        transition: background-color .2s linear;
+    }
+}
+
 .custom-button {
     max-width: 164px;
     max-height: 46px;
