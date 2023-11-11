@@ -32,7 +32,6 @@ const props = defineProps({
             font-size: 24px;
             line-height: 36px;
         }
-        
     }
 
     p {
@@ -66,14 +65,12 @@ const props = defineProps({
             @media only screen and (max-width: 1024px) {
                 font-size: 16px;
                 line-height: 23px;
-
             }
 
             &:before {
                 content: '\25C6';
                 margin-right: 7px;
             }
-
         }
     }
 

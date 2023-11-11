@@ -31,9 +31,6 @@ const props = defineProps({
         grid-template-columns: 32% 32% 32%;
         justify-content: space-between;
         grid-row-gap: 50px;
-
-        &-post {
-        }
     }
 }
 </style>

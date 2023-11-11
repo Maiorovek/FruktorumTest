@@ -16,7 +16,6 @@ const props = defineProps({
         required: true,
     },
 })
-
 </script>
 
 <style lang="scss" scoped>
