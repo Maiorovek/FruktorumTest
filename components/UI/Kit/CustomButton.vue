@@ -1,6 +1,6 @@
 <template lang="pug">
 NuxtLink.custom-route-button(v-if="link != ''" :to="link") {{ props.label }}
-button.custom-button(v-else @click="" v-text="label")
+button.custom-button(v-else) {{ checkAmp(props.label) }}
 </template>
     
 <script setup>
@@ -13,8 +13,17 @@ const props = defineProps({
         type: String,
         required: true,
     },
-
 })
+const checkAmp = (label) => {
+    switch (label) {
+        case "&lt;":
+            return '<';
+        case "&gt;":
+            return '>';
+        default:
+            return label
+    }
+} 
 </script>
     
 <style lang="scss" scoped>

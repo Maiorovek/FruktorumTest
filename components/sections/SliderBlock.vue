@@ -1,9 +1,9 @@
 <template lang="pug">
 v-carousel.carousel(hide-delimiters)
     template(v-slot:prev="{ props }" placement top)
-        CustomButton.carousel-button(@click="props.onClick" label="")
+        CustomButton.carousel-button(@click="props.onClick" label="&lt;")
     template(v-slot:next="{ props }")
-        CustomButton.carousel-button(@click="props.onClick" label=">")
+        CustomButton.carousel-button(@click="props.onClick" label="&gt;")
     v-carousel-item(v-for="image in sectionData" :src="image" fit)
 </template>
 
@@ -22,8 +22,8 @@ const props = defineProps({
     .carousel-button {
         background-color: #1B1B1B;
         border: 0;
-        width: 60px;
-        height: 60px;
+        min-width: 60px;
+        min-height: 60px;
 
         &:hover {
             background-color: #3657D3;
