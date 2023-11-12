@@ -3,7 +3,7 @@ div.form-block
     div.form-image
         img.image(:src="store.getPosts.body[0].data.image" alt="")
     div.form-content
-        div.form-title(v-text="'Стань участником проекта'")
+        h2.form-title(v-text="'Стань участником проекта'")
         div.form-inputs
             CustomInput(label="Имя" type="text")
             CustomInput(label="Телефон" type="tel")
@@ -23,12 +23,30 @@ const store = useStore();
     width: 100%;
     padding: 50px;
 
+    @media only screen and (max-width: 1024px) {
+        margin-bottom: 50px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-bottom: 25px;
+    }
+
+    @media only screen and (max-width: 675px) {
+        flex-direction: column;
+        padding: 20px;
+    }
+
     .form-image {
         margin-right: 50px;
         max-width: 595px;
         max-height: 350px;
         border-radius: 2px;
         overflow: hidden;
+
+        @media only screen and (max-width: 675px) {
+            margin: 0px;
+            margin-bottom: 10px;
+        }
 
         .image {
             width: 100%;
@@ -60,6 +78,11 @@ const store = useStore();
             @media only screen and (max-width: 1024px) {
                 margin-top: 30px;
                 margin-bottom: 30px;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                margin-top: 5px;
+                margin-bottom: 15px;
             }
 
             &>* {

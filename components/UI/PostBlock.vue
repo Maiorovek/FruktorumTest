@@ -2,7 +2,7 @@
 div.post-block
     div.post-block-image-box
         img.post-image(:src="body.image")
-    div.post-block-text(v-text="body.title")
+    h3.post-block-title(v-text="body.title")
     CustomButton(:link="body.link" label="Читать" )
 </template>
 
@@ -37,7 +37,7 @@ const props = defineProps({
         }
     }
 
-    &-text {
+    &-title {
         margin-top: 20px;
         margin-bottom: 30px;
         max-width: 100%;

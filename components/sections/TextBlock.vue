@@ -20,6 +20,18 @@ const props = defineProps({
     margin-right: auto;
     max-width: 50%;
 
+    @media only screen and (max-width: 1024px) {
+        margin-bottom: 50px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-bottom: 25px;
+    }
+
+    @media only screen and (max-width: 675px) {
+        max-width: 70%;
+    }
+
     h2 {
         margin-bottom: 50px;
         font-size: 34px;
@@ -90,6 +102,10 @@ const props = defineProps({
                 margin-right: 36px;
                 font-size: 150px;
                 content: "\2E32\2E32";
+
+                @media only screen and (max-width: 675px) {
+                   font-size: 100px; 
+                }
             }
         }
 

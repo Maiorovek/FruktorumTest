@@ -34,6 +34,11 @@ div.footer
         justify-content: space-between;
         font-weight: 400;
 
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
         .content-info {
 
             .content-text {

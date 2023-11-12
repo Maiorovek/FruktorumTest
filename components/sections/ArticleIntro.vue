@@ -3,7 +3,7 @@ div.post
     div.image-box
         img.post-image(:src='sectionData.image')
     div.post-info
-        div.info-title {{ sectionData.title }}
+        h1.info-title {{ sectionData.title }}
         div.info-time {{ `${sectionData.reading_time} мин время чтения` }}
         div.info-views {{ `${sectionData.views_count} прочтили статью` }}
         div.info-text {{ sectionData.short_description }}
@@ -25,6 +25,18 @@ div.post
         align-items: center;
         margin-bottom: 100px;
 
+        @media only screen and (max-width: 1024px) {
+            margin-bottom: 50px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            margin-bottom: 25px;
+        }
+
+        @media only screen and (max-width: 675px) {
+            flex-direction: column;
+        }
+
         .image-box {
             margin-right: 30px;
             max-width: 541px;
@@ -33,6 +45,9 @@ div.post
             border-top-right-radius: 40%;
             overflow: hidden;
 
+            @media only screen and (max-width: 675px) {
+                margin-right: 0;
+            }
             .post-image {
                 width: 100%;
                 height: 100%;
@@ -42,6 +57,10 @@ div.post
 
         &-info {
             max-width: 60%;
+            
+            @media only screen and (max-width: 675px) {
+                max-width: 90%;
+            }
             
             .info-title {
                 margin-bottom: 30px;
@@ -54,6 +73,11 @@ div.post
                     font-size: 35px;
                     line-height: 40px;
                     margin-bottom: 10px;
+                }
+
+                @media only screen and (max-width: 675px) {
+                    font-size: 20px;
+                    line-height: 25px;
                 }
             }
 
