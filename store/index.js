@@ -16,6 +16,7 @@ export const useStore = defineStore('posts', {
           this.posts = response.data
           this.error = false;
         }, (error) => {
+          console.log(error);
           this.error = true;
         });
     },

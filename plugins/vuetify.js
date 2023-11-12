@@ -1,12 +1,14 @@
 import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+import { VCarousel, VCarouselItem } from 'vuetify/components/VCarousel'
+
 
 export default defineNuxtPlugin(nuxtApp => {
   const vuetify = createVuetify({
     ssr: true,
-    components,
-    directives,
+    components: {
+      VCarousel,
+      VCarouselItem,
+    },
   })
 
   nuxtApp.vueApp.use(vuetify)
