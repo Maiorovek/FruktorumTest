@@ -1,5 +1,5 @@
 <template lang="pug">
-div.post-block
+article.post-block
     div.post-block-image-box
         img.post-image(:src="body.image")
     h3.post-block-title(v-text="body.title")
@@ -20,13 +20,10 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .post-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
     &-image-box {
-        max-height: 320px;
-        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
         border-radius: 2px;
         overflow: hidden;
 
@@ -38,19 +35,16 @@ const props = defineProps({
     }
 
     &-title {
-        margin-top: 20px;
-        margin-bottom: 30px;
+        margin-top: 2%;
+        margin-bottom: 3%;
         max-width: 100%;
-        font-size: 22px;
+        font-size: .6em;
         font-weight: 800;
+        line-height: 1.3em;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
-
-        @media only screen and (max-width: 768px) {
-            font-size: 12px;
-        }
     }
 }
 </style>

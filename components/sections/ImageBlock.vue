@@ -1,8 +1,8 @@
 <template lang="pug">
-div.image-block
+figure.image-block
     div.image-box
         img.image(:src="sectionData.src")
-    div.image-caption {{ sectionData.caption }}
+    figcaption.image-caption {{ sectionData.caption }}
 </template>
 
 <script setup>
@@ -18,20 +18,10 @@ const props = defineProps({
 .image-block {
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
-    width: 100%;
-    
-    @media only screen and (max-width: 1024px) {
-        margin-bottom: 50px;
-    }
-
-    @media only screen and (max-width: 768px) {
-        margin-bottom: 25px;
-    }
+    margin-bottom: 10%;
 
     .image-box {
-        border-radius: 2px;
-        border-top-right-radius: 220px;
+        border-radius: 2px 220px 2px 2px;
         overflow: hidden;
 
         .image {

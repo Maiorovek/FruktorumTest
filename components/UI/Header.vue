@@ -1,5 +1,5 @@
 <template lang="pug">
-div.header
+header.header
     Logo
 </template>
     

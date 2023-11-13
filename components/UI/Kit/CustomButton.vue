@@ -39,6 +39,7 @@ const checkAmp = (label) => {
     background-color: #1B1B1B;
     color: white;
     font-size: 18px;
+    line-height: 1em;
     text-decoration: none;
 
     &:hover {
@@ -56,6 +57,7 @@ const checkAmp = (label) => {
     border-radius: 2px;
     color: white;
     font-size: 18px;
+    line-height: 1em;
 
     &:hover {
         background-color: transparent;

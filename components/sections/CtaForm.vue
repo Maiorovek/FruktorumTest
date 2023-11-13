@@ -8,7 +8,7 @@ div.form-block
             CustomInput(label="Имя" type="text")
             CustomInput(label="Телефон" type="tel")
             CustomInput(label="Email" type="email")
-        CustomButton(label="Присоединиться")
+        CustomButton.form-button(label="Присоединиться")
 </template>
 
 <script setup>
@@ -17,36 +17,19 @@ const store = useStore();
 
 <style lang="scss" scoped>
 .form-block {
-    margin-bottom: 100px;
+    margin-bottom: 10%;
     background-color: #1B1B1B;
     display: flex;
-    width: 100%;
-    padding: 50px;
-
-    @media only screen and (max-width: 1024px) {
-        margin-bottom: 50px;
-    }
-
-    @media only screen and (max-width: 768px) {
-        margin-bottom: 25px;
-    }
-
-    @media only screen and (max-width: 675px) {
-        flex-direction: column;
-        padding: 20px;
-    }
+    padding: 4%;
+    font-size: 34px;
+    line-height: 1.35em;
 
     .form-image {
-        margin-right: 50px;
-        max-width: 595px;
         max-height: 350px;
+        max-width: 50%;
+        margin-right: 4%;
         border-radius: 2px;
         overflow: hidden;
-
-        @media only screen and (max-width: 675px) {
-            margin: 0px;
-            margin-bottom: 10px;
-        }
 
         .image {
             width: 100%;
@@ -56,41 +39,52 @@ const store = useStore();
     }
 
     .form-content {
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .form-title {
-            font-size: 34px;
+            font-size: 1em;
             font-weight: 800;
-            line-height: 46px;
+            line-height: 1.35em;
             color: white;
-
-            @media only screen and (max-width: 1024px) {
-                font-size: 20px;
-                line-height: 30px;
-            }
         }
 
         .form-inputs {
             display: flex;
             flex-direction: column;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            justify-content: space-between;
+            max-width: 50%;
 
-            @media only screen and (max-width: 1024px) {
-                margin-top: 30px;
-                margin-bottom: 30px;
+        &>* {
+                margin-top: 5%;
+            }
+        }
+
+        .form-button {
+            margin-top: 5%;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        font-size: 25px;
+    }
+
+    @media only screen and (max-width: 575px) { 
+        flex-direction: column;
+
+        .form-image {
+            max-width: 100%;
+            margin: 0 0 5%;
+        }
+
+        .form-content {
+            
+            .form-inputs {
+                max-width: 100%;
             }
 
-            @media only screen and (max-width: 1024px) {
-                margin-top: 5px;
-                margin-bottom: 15px;
-            }
-
-            &>* {
-                margin-top: 25px;
-
-                @media only screen and (max-width: 1024px) {
-                    margin-top: 20px
-                }
+            .form-button {
+                align-self: center;
             }
         }
     }

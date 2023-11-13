@@ -1,5 +1,5 @@
 <template lang="pug">
-div.footer
+footer.footer
     div.footer-content
         div.content-info
             Logo

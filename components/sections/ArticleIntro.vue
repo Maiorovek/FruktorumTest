@@ -1,12 +1,12 @@
 <template lang="pug">
-div.post
+section.post
     div.image-box
         img.post-image(:src='sectionData.image')
     div.post-info
         h1.info-title {{ sectionData.title }}
-        div.info-time {{ `${sectionData.reading_time} мин время чтения` }}
-        div.info-views {{ `${sectionData.views_count} прочтили статью` }}
-        div.info-text {{ sectionData.short_description }}
+        p.info-time {{ `${sectionData.reading_time} мин время чтения` }}
+        p.info-views {{ `${sectionData.views_count} прочтили статью` }}
+        p.info-text {{ sectionData.short_description }}
 </template>
 
 <script setup>
@@ -23,31 +23,15 @@ div.post
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 100px;
-
-        @media only screen and (max-width: 1024px) {
-            margin-bottom: 50px;
-        }
-
-        @media only screen and (max-width: 768px) {
-            margin-bottom: 25px;
-        }
-
-        @media only screen and (max-width: 675px) {
-            flex-direction: column;
-        }
+        margin-bottom: 10%;
+        font-size: 56px;
+        line-height: 1.2em;
 
         .image-box {
-            margin-right: 30px;
-            max-width: 541px;
-            max-height: 580px;
-            border-radius: 2px;
-            border-top-right-radius: 40%;
+            max-width: 44%;
+            border-radius: 2px 40% 2px 2px;
             overflow: hidden;
 
-            @media only screen and (max-width: 675px) {
-                margin-right: 0;
-            }
             .post-image {
                 width: 100%;
                 height: 100%;
@@ -56,49 +40,47 @@ div.post
         }
 
         &-info {
-            max-width: 60%;
-            
-            @media only screen and (max-width: 675px) {
-                max-width: 90%;
-            }
-            
+            max-width: 54%;
+            display: flex;
+            flex-direction: column;
+
             .info-title {
-                margin-bottom: 30px;
-                font-size: 56px;
+                margin-bottom: 4%;
+                font-size: 1em;
                 font-weight: 800;
-                line-height: 66px;
                 color: #1B1B1B;
-
-                @media only screen and (max-width: 1024px) {
-                    font-size: 35px;
-                    line-height: 40px;
-                    margin-bottom: 10px;
-                }
-
-                @media only screen and (max-width: 675px) {
-                    font-size: 20px;
-                    line-height: 25px;
-                }
             }
 
             .info-time, .info-views {
-                margin-bottom: 4px;
-                font-size: 14px;
-                font-weight: 400px;
-                line-height: 20px;
+                margin-bottom: 1%;
+                font-size: .25em;
+                font-weight: 400;
+                line-height: 1.4em;
                 color: #8D959C;
             }
 
             .info-text {
-                margin-top: 50px;
-                font-size: 18px;
-                font-weight: 400px;
-                line-height: 26px;
+                margin-top: 4%;
+                font-size: .32em;
+                font-weight: 400;
+                line-height: 1.4em;
                 color: #1B1B1B;
+            }
+        }
 
-                @media only screen and (max-width: 1024px) {
-                    margin-top: 10px;
-                }
+        @media only screen and (max-width: 1199px) {
+            font-size: 40px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            font-size: 30px;
+        }
+
+        @media only screen and (max-width: 575px) {
+            flex-direction: column;
+
+            .image-box, .post-info {
+                max-width: 100%;
             }
         }
     }
