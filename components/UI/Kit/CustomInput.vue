@@ -30,6 +30,10 @@ const props = defineProps({
         color: #8D959C;
         border-bottom: 1px solid #3657D3;
         transition: border-bottom .2s ease;
+
+        &::placeholder {
+            opacity: 0;
+        }
     }
 }
 </style>
